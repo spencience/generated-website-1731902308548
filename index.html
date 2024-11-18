@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                        <title>Home</title>
+                        <script src="https://cdn.tailwindcss.com"></script>
+                    </head>
+                    <body class="bg-white">
+                        <main class="container mx-auto p-4 max-w-screen-md mt-12">
+  <h1 class="text-3xl font-bold mb-4">Cryptogram Generator</h1>
+  <section class="bg-gray-100 p-4 rounded mb-8">
+    <h2 class="text-2xl font-bold mb-2">How it Works</h2>
+    <p class="text-lg">Input a message and select a cryptographic algorithm to generate a cryptogram.</p>
+  </section>
+  <section class="bg-white p-4 rounded mb-8">
+    <form class="flex flex-col">
+      <label class="text-lg mb-2" for="message">Message:</label>
+      <textarea class="w-full p-2 mb-4 border border-gray-400 rounded" id="message" rows="4"></textarea>
+      <label class="text-lg mb-2" for="algorithm">Select Algorithm:</label>
+      <select class="w-full p-2 mb-4 border border-gray-400 rounded" id="algorithm">
+        <option value="caesar">Caesar Cipher</option>
+        <option value="vigenere">Vigenere Cipher</option>
+        <option value="atbash">Atbash Cipher</option>
+      </select>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="generate-button">Generate Cryptogram</button>
+    </form>
+  </section>
+  <section class="bg-gray-100 p-4 rounded mb-8">
+    <h2 class="text-2xl font-bold mb-2">Generated Cryptogram</h2>
+    <div id="cryptogram-container" class="p-4">
+      <p id="cryptogram" class="text-lg"></p>
+    </div>
+  </section>
+  <section class="text-lg opacity-50">
+    <p>Remember, a cryptogram is a cipher where each letter is replaced by a different one.</p>
+  </section>
+</main>
+                    </body>
+                    </html>
